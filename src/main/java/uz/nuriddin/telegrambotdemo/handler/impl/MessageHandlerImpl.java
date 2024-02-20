@@ -32,6 +32,7 @@ public class MessageHandlerImpl implements MessageHandler {
 
         }else if (message.hasContact()) {
             Contact contact = message.getContact();
+
         }
 
     }

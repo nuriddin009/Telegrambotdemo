@@ -9,6 +9,7 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import uz.nuriddin.telegrambotdemo.config.TelegramBotProperties;
 import uz.nuriddin.telegrambotdemo.handler.CallbackQueryHandler;
+import uz.nuriddin.telegrambotdemo.handler.InlineQueryHandler;
 import uz.nuriddin.telegrambotdemo.handler.MessageHandler;
 
 @Component
@@ -18,6 +19,7 @@ public class BotConfig {
     private final TelegramBotProperties botProperties;
     private final MessageHandler messageHandler;
     private final CallbackQueryHandler callbackQueryHandler;
+    private final InlineQueryHandler inlineQueryHandler;
 
     @Bean
     public DefaultBotOptions defaultBotOptions() {
@@ -30,7 +32,12 @@ public class BotConfig {
     @Bean
     public TelegramBotsApi telegramBotsApi() {
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-        telegramBotsApi.registerBot(new DemoBot(messageHandler, callbackQueryHandler, botProperties, new DefaultBotOptions()));
+        telegramBotsApi.registerBot(new DemoBot(messageHandler,
+                callbackQueryHandler,
+                botProperties,
+                new DefaultBotOptions(),
+                inlineQueryHandler
+        ));
         return telegramBotsApi;
     }
 }
