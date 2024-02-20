@@ -8,7 +8,9 @@ import uz.nuriddin.telegrambotdemo.handler.CallbackQueryHandler;
 @Service
 public class CallBackQueryHandlerImpl implements CallbackQueryHandler {
     @Override
-    public void handle(CallbackQuery callbackQuery, AbsSender absSender) {
+    public void handle(CallbackQuery callbackQuery, AbsSender sender) {
+        String data = callbackQuery.getData();
+        String chatId = callbackQuery.getFrom().getId().toString();
 
     }
 }
