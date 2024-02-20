@@ -6,8 +6,8 @@ import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import uz.nuriddin.telegrambotdemo.config.TelegramBotProperties;
-import uz.nuriddin.telegrambotdemo.service.CallbackQueryHandler;
-import uz.nuriddin.telegrambotdemo.service.MessageHandler;
+import uz.nuriddin.telegrambotdemo.handler.CallbackQueryHandler;
+import uz.nuriddin.telegrambotdemo.handler.MessageHandler;
 
 @Slf4j
 @Component

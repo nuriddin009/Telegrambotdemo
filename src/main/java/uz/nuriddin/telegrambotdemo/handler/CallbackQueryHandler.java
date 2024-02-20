@@ -1,4 +1,4 @@
-package uz.nuriddin.telegrambotdemo.service;
+package uz.nuriddin.telegrambotdemo.handler;
 
 import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.bots.AbsSender;
