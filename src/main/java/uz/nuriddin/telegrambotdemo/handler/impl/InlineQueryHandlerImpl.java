@@ -21,7 +21,7 @@ import java.util.List;
 @Slf4j
 @Service
 public class InlineQueryHandlerImpl implements InlineQueryHandler {
-    private static final Integer CACHETIME = 86400;
+    private static final Integer CACHETIME = 0;
 
     private static final String apiUrl = "https://jsonplaceholder.typicode.com/users";
 
@@ -69,7 +69,7 @@ public class InlineQueryHandlerImpl implements InlineQueryHandler {
         for (int i = 0; i < raeResults.length; i++) {
             User user = raeResults[i];
             InputTextMessageContent messageContent = new InputTextMessageContent();
-            messageContent.setMessageText("Name: " + user.getName());
+            messageContent.setMessageText(user.getId() + " " + user.getName());
             InlineQueryResultArticle article = new InlineQueryResultArticle();
             article.setInputMessageContent(messageContent);
             article.setId(Integer.toString(i));
