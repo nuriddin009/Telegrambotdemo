@@ -1,3 +1,3 @@
-telegram-bot:
-  token: 5741268288:AAFuMOPJDgXVdZv0xh8t_nQ67lO5T6nnHPg
-  username: parroootrobot
+spring:
+  profiles:
+    active: local
