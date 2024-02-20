@@ -39,7 +39,7 @@ public class InlineQueryHandlerImpl implements InlineQueryHandler {
     }
 
     private void handleIncomingInlineQuery(InlineQuery inlineQuery, AbsSender sender) {
-        String query = inlineQuery.getQuery();
+        String query = inlineQuery.getQuery().trim();
         log.debug("Searching: " + query);
         try {
             if (!query.isEmpty()) {
