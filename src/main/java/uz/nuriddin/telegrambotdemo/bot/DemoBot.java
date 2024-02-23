@@ -1,5 +1,6 @@
 package uz.nuriddin.telegrambotdemo.bot;
 
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
@@ -11,6 +12,7 @@ import uz.nuriddin.telegrambotdemo.handler.InlineQueryHandler;
 import uz.nuriddin.telegrambotdemo.handler.MessageHandler;
 
 @Slf4j
+@NoArgsConstructor(force = true)
 @Component
 public class DemoBot extends TelegramLongPollingBot {
 
